@@ -24,6 +24,7 @@ class movement(DTROS):
 
         self.bridge = CvBridge()
 
+        #set camera capture file location on the Raspberry Pi
         self.cap = cv2.VideoCapture("/dev/video0", cv2.CAP_V4L2)
 
         #set dimensions to be 160x120 for faster processing time
