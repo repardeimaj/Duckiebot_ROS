@@ -16,7 +16,7 @@ class movement(DTROS):
     def __init__(self, node_name):
         super(movement, self).__init__(node_name=node_name, node_type=NodeType.DRIVER)
         self.wheelPub = rospy.Publisher("/ubuntu/wheels_driver_node/wheels_cmd", WheelsCmdStamped, queue_size=1, dt_topic_type=TopicType.CONTROL)
-        self.imgSub = rospy.Subscriber("/ubuntu/camera_node/image/compressed", CompressedImage, queue_size=20, callback = self.imageProcessCallback)
+        #self.imgSub = rospy.Subscriber("/ubuntu/camera_node/image/compressed", CompressedImage, queue_size=20, callback = self.imageProcessCallback)
         self.imgPub = rospy.Publisher("testImage",Image, queue_size=1, dt_topic_type=TopicType.DEBUG)
         
         # 0: stop, 1: forward, 2: turn
