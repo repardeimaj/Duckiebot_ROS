@@ -116,8 +116,6 @@ class movement(DTROS):
             # image_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
 
             # self.imgPub.publish(image_msg)
-        
-
 
     def move(self):
         self.msg = WheelsCmdStamped()
@@ -138,15 +136,7 @@ class movement(DTROS):
         else:
             self.msg.vel_left = 0
             self.msg.vel_right = 0
-        self.wheelPub.publish(self.msg)
-            
-
-
-
-
-
-
-        
+        self.wheelPub.publish(self.msg)      
 
 if __name__ == "__main__":
     node = movement(node_name="wheels_driver_node")
